@@ -1,0 +1,17 @@
+/* Show it is fixed to the top */
+body {
+  min-height: 45rem;
+  padding-top: 0.0rem;
+}
+
+.jumbotron {
+    margin-top:10px;
+    max-height: 13rem;
+    margin-bottom:10px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+
+.border-now {
+    border-width:5px !important;
+}

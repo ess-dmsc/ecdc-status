@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>ECDC Upcoming events</title>
+    {% load static %}
+    <!-- Bootstrap core CSS -->
+    <link href="{% static "css/bootstrap.min.css" %}" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="{% static "css/upcoming_events.css" %}" rel="stylesheet">
+  </head>
+
+  <body>
+    <div class="text-center">
+      <h1 class="display-4">{% if event_now %}Current and upcoming events{% else%}Upcoming events{% endif %}</h1>
+    </div>
+    <main role="main" class="container">
+      {% if event_list %}
+          {% for event in event_list %}
+          <div class="border {% if event.isOngoing %} border-now border-primary {% endif %} jumbotron">
+            <div class="row">
+              <div class="col-10">
+                <h1>{{event.Title}}</h1>
+                {% if event.isOngoing %}
+                <h2>Done in <b>{{ event.timeUntilEnd }}</b> {{event.timeUntilEndUnit}}</h2>
+                {% else %}
+                <h2><b>{{ event.timeUntilStart }}</b> {{event.timeUntilStartUnit}}</h2>
+                {% endif %}
+              </div>
+              <div class="col-2">
+                {% if event.Icon %}
+                <img src="{% static event.Icon.FileName %}" width="100">
+                {% endif %}
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+      {% else %}
+      <div class="jumbotron">
+        <div class="row">
+          <div class="col-10">
+            <h1>No upcoming events</h1>
+          </div>
+          <div class="col-2">
+          </div>
+        </div>
+      </div>
+      {% endif %}
+    </main>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+    <script src="{% static "js/bootstrap.min.js" %}"></script>
+  </body>
+</html>
