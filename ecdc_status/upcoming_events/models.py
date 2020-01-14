@@ -3,7 +3,7 @@ from django.utils import timezone
 
 class EventIcon(models.Model):
     Name = models.CharField(max_length = 50)
-    FileName = models.CharField(max_length = 50)
+    Image = models.FileField(upload_to = "icon_images/")
     
     def __str__(self):
         return self.Name

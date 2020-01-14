@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<head>
+  <title>List of crime scenes</title>
+</head>
+<body>
+  <div>
+    <h1 align="center">List of crime scenes</h1>
+    <ul>
+      {% for scene in scenes %}
+      <li><a href="{{scene.id}}/">{{scene.Name}}</a></li>
+      {% endfor %}
+      <li><a href="random/">Random</a></li>
+    </ul>
+  </div>
+</body>

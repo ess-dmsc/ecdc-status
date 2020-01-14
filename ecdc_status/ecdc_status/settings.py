@@ -40,7 +40,7 @@ except NameError:
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["skytoground.org", "localhost"]
 
 
 # Application definition
@@ -75,6 +75,7 @@ TEMPLATES = [
         'DIRS': [],
         'APP_DIRS': True,
         'OPTIONS': {
+            'debug': True,
             'context_processors': [
                 'django.template.context_processors.debug',
                 'django.template.context_processors.request',
@@ -141,3 +142,8 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static"),
     '../static/'
 ]
+
+STATIC_ROOT = "../static_files/"
+
+MEDIA_ROOT = "../media_files/"
+MEDIA_URL = "/media/"

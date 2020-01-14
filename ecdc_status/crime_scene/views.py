@@ -4,6 +4,14 @@ from django.template import loader
 from django.http import HttpResponse
 from random import randint
 
+def list(request):
+    AllCrimeScenes = CrimeScene.objects.all()
+    template = loader.get_template('list.html')
+    context = {
+        'scenes': AllCrimeScenes,
+    }
+    return HttpResponse(template.render(context, request))
+
 def random_crime_scene(request):
     AllCrimeScenes = CrimeScene.objects.all()
     RandomIndex = randint(0, len(AllCrimeScenes) - 1)

@@ -32,7 +32,7 @@
               </div>
               <div class="col-2">
                 {% if event.Icon %}
-                <img src="{% static event.Icon.FileName %}" width="100">
+                <img src="{{event.Icon.Image.url}}" width="100">
                 {% endif %}
               </div>
             </div>
