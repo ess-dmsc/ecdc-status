@@ -1,0 +1,26 @@
+Code is debt (and bad code is an unhedged call option).
+Our users don't care about the code.
+Every line of code has costs (your time, readability, maintainability, complexity).
+Don't add features unless you're sure it is necessary.
+Don't optimize prematurely.
+DRY DRY DRY.
+Keep it simple (especially at first).
+Be consistent.
+Be predictable (aka no magic).
+No magic numbers/strings — use constants instead.
+A good repro is 90% of a bugfix.
+Code is written once, but is read many times.
+Ship early, ship often.
+First code, then ship, then measure, then optimize.
+Remember the 80/20 rule, and the 90/90 rule.
+First you don't know the rules, then you learn the rules, then you break the rules.
+You can't have bugs if you don't write any code.
+Google is your friend.
+Computers are dumb.
+Analyze, then optimize.
+There’s Two Kinds of Stupidity:\n1. “This is old, and there fore it's good”.\n2. “This is new, and there fore it's better”.
+Wisdom emerges from experience. Unfortunately, most experience emerges from stupidity.
+There is no such thing as a free lunch.
+Everybody makes mistakes, including you.
+When in doubt, use brute force.
+Recursion. See Maxim #26.

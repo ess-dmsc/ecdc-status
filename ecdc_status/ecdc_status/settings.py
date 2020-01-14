@@ -54,6 +54,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'upcoming_events.apps.UpcomingEventsConfig',
     'crime_scene.apps.CrimeSceneConfig',
+    'maxims.apps.MaximsConfig'
 ]
 
 MIDDLEWARE = [
