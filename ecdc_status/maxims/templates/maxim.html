@@ -1,11 +1,24 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>#{{id}}: {{text}}</title>
+    <title>Code Maxims</title>
     {% load static %}
-    <!-- <link href="{% static "css/some_css_file.css" %}" rel="stylesheet"> -->
+    <link href="{% static "css/style.css" %}" rel="stylesheet">
   </head>
 
   <body>
+    <h1 class="title">CODE MAXIMS</h1>
+    <table>
+      <tr>
+        <td>
+          <h3 class="id">#{{id}}</h3>
+        </td>
+        <td>
+          <p class="content">
+            {{text}}
+          </p>
+        </td>
+      </tr>
+    </table>
   </body>
 </html>
